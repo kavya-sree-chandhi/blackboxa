@@ -1,0 +1,22 @@
+<html> <head> <style> body { background-color: #b6d9fd; font-family: Arial, sans-serif; }
+header { background-color: #007bff; color: white; padding: 10px; text-align: center; }
+
+header a { color: white; text-decoration: none; margin: 0 5px; }
+
+.product { background-color: white; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin: 10px; display: inline-block; }
+
+.product img { width: 100%; height: auto; }
+
+.product p { margin: 5px 0; }
+
+footer { background-color: #007bff; color: white; padding: 10px; text-align: center; position: fixed; bottom: 0; width: 100%; }
+
+#contact-form { background-color: white; padding: 20px; border: 1px solid #ddd; border-radius: 5px; margin-top: 20px; }
+
+#contact-form input, #contact-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
+
+#contact-form button { background-color: #007bff; color: white; padding: 10px; border: none; border-radius: 5px; }
+
+#cart { position: fixed; top: 10px; right: 10px; background-color: #007bff; color: white; padding: 10px; border-radius: 50%; } </style>
+
+</head> <body> <header> Denton Plant Factory <a href="#">Home</a> <a href="#">About</a> <a href="#">Contact</a> </header> <div id="cart"> <img src="cart.png" alt="Cart"> <p id="cart-count">0</p> </div> <div class="product"> <img src="plant1.jpg" alt="Plant 1"> <p>Name: <strong>Snake Plant</strong></p> <p>Description: Native to West Africa, this plant is known for its air-purifying qualities.</p> <button onclick="addToCart(1)">Add to Cart</button> </div> <div class="product"> <img src="plant2.jpg" alt="Plant 2"> <p>Name: <strong>Spider Plant</strong></p> <p>Description: This plant is great for removing harmful toxins from the air.</p> <button onclick="addToCart(2)">Add to Cart</button> </div> <div class="product"> <img src="plant3.jpg" alt="Plant 3"> <p>Name: <strong>Pothos</strong></p> <p>Description: This plant is one of the most effective for removing formaldehyde from the air.</p> <button onclick="addToCart(3)">Add to Cart</button> </div> <div id="contact-form"> <h2>Contact Us</h2> <input type="text" id="full-name" placeholder="Full Name"> <input type="number" id="contact-number" placeholder="Contact Number"> <input type="email" id="email-id" placeholder="Email ID"> <button onclick="submitForm()">Submit</button> </div> <footer> &copy; 2023 Denton Plant Factory </footer> <script> let cart = []; function addToCart(productId) { // Add product to cart cart.push(productId); updateCartCount(); } function updateCartCount() { document.getElementById("cart-count").inner
